@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="黄哥Python培训">
 <meta property="og:description" content="知乎上有人问Python中的列表按相同元素分割？比如列表[0,0,0,1,1,2,3,3,3,2,3,3,0,0]分割成[0,0,0],[1,1],[2],[3,3,3],[2],[3,3],[0,0]
 如何解决这样的问题呢？1、首先说明，如果这样的题目都不能写出代码，原因在基本的循环判断没有搞清楚。2、黄哥在如何训练自己的编程思路 文章所说的，做习题，要像开发项目的流程一样（需求－&amp;gt;需求分">
-<meta property="og:updated_time" content="2016-08-18T04:23:29.000Z">
+<meta property="og:updated_time" content="2016-08-18T22:56:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python列表元素分组">
 <meta name="twitter:description" content="知乎上有人问Python中的列表按相同元素分割？比如列表[0,0,0,1,1,2,3,3,3,2,3,3,0,0]分割成[0,0,0],[1,1],[2],[3,3,3],[2],[3,3],[0,0]
@@ -55,9 +55,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://pythonpeixun.github.io"></form>
@@ -149,13 +149,39 @@ if __name__ == &apos;__main__&apos;:
     lst = [0, 0, 0, 1, 1, 2, 3, 3, 3, 2, 3, 3, 0, 0]
     group = group_by_element(lst)
     print list(group)
+</code></pre><p>思路三：<br>基本思路用一个二维list [[]], 遍历list，判断前后元素是不是相等，如果相等添加到result[-1]，<br>如果不相等，需要添加一个空[]。</p>
+<pre><code># coding:utf-8
+
+
+def group_by_element(lst):
+    &apos;&apos;&apos;by 黄哥  基本思路用一个二维list [[]], 遍历list
+    判断前后元素是不是相等，如果相等添加到result[-1]，如果
+    不相等，需要添加一个空[]
+    &apos;&apos;&apos;
+    result = [[]]
+    length = len(lst)
+    for i in range(length):
+        if i &lt; length - 1:
+            if lst[i] == lst[i + 1]:
+                result[-1].append(lst[i])
+            else:
+                result[-1].append(lst[i])
+                result.append([])
+
+    result[-1].append(lst[i])
+    return result
+
+if __name__ == &apos;__main__&apos;:
+    lst = [0, 0, 0, 1, 1, 2, 3, 3, 3, 2, 3, 3, 0, 0]
+    group = group_by_element(lst)
+    print group
 </code></pre><p><a href="https://github.com/pythonpeixun/article/blob/master/python/hours_216.md" target="_blank" rel="external">216小时学会Python</a>   </p>
 <p><a href="https://github.com/pythonpeixun/article/blob/master/python_shiping.md" target="_blank" rel="external">点击黄哥python培训试看视频播放地址</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pythonpeixun.github.io/2016/08/18/Python列表元素分组/" data-id="cirzto0rg0000v5s6gdwhg9ek" class="article-share-link">Partager</a>
+      <a data-url="http://pythonpeixun.github.io/2016/08/18/Python列表元素分组/" data-id="cis0xfku60000pls6g4vh84rs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -166,7 +192,7 @@ if __name__ == &apos;__main__&apos;:
   
   
     <a href="/2016/08/11/216小时学会Python/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">216小时学会Python</div>
     </a>
   
@@ -199,7 +225,7 @@ if __name__ == &apos;__main__&apos;:
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -224,7 +250,7 @@ if __name__ == &apos;__main__&apos;:
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 黄哥 qq:1465376564<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
