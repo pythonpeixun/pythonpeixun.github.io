@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://pythonpeixun.github.io"></form>
@@ -84,9 +84,20 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><a href="https://www.zhihu.com/question/49891849/answer/118302072" target="_blank" rel="external">有人提问</a><br>黄哥修改的代码</p>
-<h2 id="Python-类有特殊的方法add-str-等。"><a href="#Python-类有特殊的方法add-str-等。" class="headerlink" title="Python 类有特殊的方法add, str 等。"></a>Python 类有特殊的方法<strong>add</strong>, <strong>str</strong> 等。</h2><p>object.<strong>add</strong>(self, other)<br>object.<strong>sub</strong>(self, other)<br>object.<strong>mul</strong>(self, other)<br>object.<strong>floordiv</strong>(self, other)<br>object.<strong>mod</strong>(self, other)<br>object.<strong>divmod</strong>(self, other)<br>object.<strong>pow</strong>(self, other[, modulo])<br>object.<strong>lshift</strong>(self, other)<br>object.<strong>rshift</strong>(self, other)<br>object.<strong>and</strong>(self, other)<br>object.<strong>xor</strong>(self, other)<br>object.<strong>or</strong>(self, other)</p>
-<p>上面的方法被调用时，实现了相应的二元算数运算符。(+, -, <em>, //, %, divmod(), pow(), *</em>, &lt;&lt;, &gt;&gt;, &amp;, ^, |)<br>实例说明：<br>表达式 x + y ,如果x的类有一个<strong>add</strong>方法，相当于x.<strong>add</strong>(y) 被调用。</p>
-<h2 id="类定义了str-方法，当调用str-内置函数或Python-2的print-语句时，"><a href="#类定义了str-方法，当调用str-内置函数或Python-2的print-语句时，" class="headerlink" title="类定义了str 方法，当调用str()内置函数或Python 2的print 语句时，"></a>类定义了<strong>str</strong> 方法，当调用str()内置函数或Python 2的print 语句时，</h2><p>这个方法就会被调用。</p>
+<h2 id="Python-类有特殊的方法-add-str-等。"><a href="#Python-类有特殊的方法-add-str-等。" class="headerlink" title="Python 类有特殊的方法__add__, __str__ 等。"></a>Python 类有特殊的方法__add__, __str__ 等。</h2><pre><code>object.__add__(self, other)
+object.__sub__(self, other)
+object.__mul__(self, other)
+object.__floordiv__(self, other)
+object.__mod__(self, other)
+object.__divmod__(self, other)
+object.__pow__(self, other[, modulo])
+object.__lshift__(self, other)
+object.__rshift__(self, other)
+object.__and__(self, other)
+object.__xor__(self, other)
+object.__or__(self, other)
+</code></pre><p>上面的方法被调用时，实现了相应的二元算数运算符。(+, -, <em>, //, %, divmod(), pow(), *</em>, &lt;&lt;, &gt;&gt;, &amp;, ^, |)<br>实例说明：<br>表达式 x + y ,如果x的类有一个__add__方法，相当于x.__add__(y) 被调用。</p>
+<h2 id="类定义了-str-方法，当调用str-内置函数或Python-2的print-语句时，"><a href="#类定义了-str-方法，当调用str-内置函数或Python-2的print-语句时，" class="headerlink" title="类定义了__str__ 方法，当调用str()内置函数或Python 2的print 语句时，"></a>类定义了__str__ 方法，当调用str()内置函数或Python 2的print 语句时，</h2><p>这个方法就会被调用。</p>
 <pre><code># coding:utf-8
 
 
@@ -129,7 +140,7 @@ print str(p3)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pythonpeixun.github.io/2016/08/23/实例对象加法和字符串表示/" data-id="cis6qtc8z000027s67fpkqln6" class="article-share-link">Delen</a>
+      <a data-url="http://pythonpeixun.github.io/2016/08/23/实例对象加法和字符串表示/" data-id="cis6rmu0d0001b7s6zwjmt38y" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -254,7 +265,7 @@ if __name__ == &apos;__main__&apos;:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pythonpeixun.github.io/2016/08/18/Python列表元素分组/" data-id="cis6qtc9j000127s62xelbmyv" class="article-share-link">Delen</a>
+      <a data-url="http://pythonpeixun.github.io/2016/08/18/Python列表元素分组/" data-id="cis6rmu0h0002b7s6xhb9k8xi" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -303,7 +314,7 @@ if __name__ == &apos;__main__&apos;:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pythonpeixun.github.io/2016/08/11/216小时学会Python/" data-id="cis6qtc9m000227s6eilrrddp" class="article-share-link">Delen</a>
+      <a data-url="http://pythonpeixun.github.io/2016/08/11/216小时学会Python/" data-id="cis6rmu070000b7s6mjo1knnr" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -328,7 +339,7 @@ if __name__ == &apos;__main__&apos;:
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li></ul>
     </div>
@@ -338,7 +349,7 @@ if __name__ == &apos;__main__&apos;:
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -367,7 +378,7 @@ if __name__ == &apos;__main__&apos;:
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 黄哥 qq:1465376564<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
