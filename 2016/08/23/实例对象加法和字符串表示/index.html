@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>实例对象加法和字符串表示 | 黄哥Python培训</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="有人提问黄哥修改的代码
+Python 类有特殊的方法add, str 等。object.add(self, other)object.sub(self, other)object.mul(self, other)object.floordiv(self, other)object.mod(self, other)object.divmod(self, other)object.pow(self,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实例对象加法和字符串表示">
+<meta property="og:url" content="http://pythonpeixun.github.io/2016/08/23/实例对象加法和字符串表示/index.html">
+<meta property="og:site_name" content="黄哥Python培训">
+<meta property="og:description" content="有人提问黄哥修改的代码
+Python 类有特殊的方法add, str 等。object.add(self, other)object.sub(self, other)object.mul(self, other)object.floordiv(self, other)object.mod(self, other)object.divmod(self, other)object.pow(self,">
+<meta property="og:updated_time" content="2016-08-23T00:37:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="实例对象加法和字符串表示">
+<meta name="twitter:description" content="有人提问黄哥修改的代码
+Python 类有特殊的方法add, str 等。object.add(self, other)object.sub(self, other)object.mul(self, other)object.floordiv(self, other)object.mod(self, other)object.divmod(self, other)object.pow(self,">
+  
+    <link rel="alternate" href="/atom.xml" title="黄哥Python培训" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">黄哥Python培训</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://pythonpeixun.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="python-实例对象加法和字符串表示" class="article article-type-python" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/23/实例对象加法和字符串表示/" class="article-date">
+  <time datetime="2016-08-23T00:22:03.000Z" itemprop="datePublished">2016-08-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      实例对象加法和字符串表示
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://www.zhihu.com/question/49891849/answer/118302072" target="_blank" rel="external">有人提问</a><br>黄哥修改的代码</p>
+<h2 id="Python-类有特殊的方法add-str-等。"><a href="#Python-类有特殊的方法add-str-等。" class="headerlink" title="Python 类有特殊的方法add, str 等。"></a>Python 类有特殊的方法<strong>add</strong>, <strong>str</strong> 等。</h2><p>object.<strong>add</strong>(self, other)<br>object.<strong>sub</strong>(self, other)<br>object.<strong>mul</strong>(self, other)<br>object.<strong>floordiv</strong>(self, other)<br>object.<strong>mod</strong>(self, other)<br>object.<strong>divmod</strong>(self, other)<br>object.<strong>pow</strong>(self, other[, modulo])<br>object.<strong>lshift</strong>(self, other)<br>object.<strong>rshift</strong>(self, other)<br>object.<strong>and</strong>(self, other)<br>object.<strong>xor</strong>(self, other)<br>object.<strong>or</strong>(self, other)</p>
+<p>上面的方法被调用时，实现了相应的二元算数运算符。(+, -, <em>, //, %, divmod(), pow(), *</em>, &lt;&lt;, &gt;&gt;, &amp;, ^, |)<br>实例说明：<br>表达式 x + y ,如果x的类有一个<strong>add</strong>方法，相当于x.<strong>add</strong>(y) 被调用。</p>
+<h2 id="类定义了str-方法，当调用str-内置函数或Python-2的print-语句时，"><a href="#类定义了str-方法，当调用str-内置函数或Python-2的print-语句时，" class="headerlink" title="类定义了str 方法，当调用str()内置函数或Python 2的print 语句时，"></a>类定义了<strong>str</strong> 方法，当调用str()内置函数或Python 2的print 语句时，</h2><p>这个方法就会被调用。</p>
+<pre><code># coding:utf-8
+
+
+class Point(object):
+    &quot;&quot;&quot;黄哥修改&quot;&quot;&quot;
+
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __add__(self, other):
+
+        if isinstance(other, tuple):
+            self.x += other[0]
+            self.y += other[1]
+            return self
+
+        elif isinstance(other, Point):
+            self.x += other.x
+            self.y += other.y
+            return self
+
+    def __radd__(self, other):
+        return self.__add__(other)
+
+    def __str__(self):
+        return &quot;Point({0}, {1})&quot;.format(self.x, self.y)
+
+    __repr__ = __str__
+
+p1 = Point(1, 2)
+p2 = Point(3, 4)
+p3 = Point(2, 2)
+print p1 + p2 + p3
+print sum([p1 + p2 + (3, 5)], p3)
+print str(p3)
+</code></pre><p><a href="https://github.com/pythonpeixun/article/blob/master/shanghai_weekend.md" target="_blank" rel="external">Python上海周末培训班</a></p>
+<p><a href="https://pythonpeixun.github.io/2016/08/11/216%E5%B0%8F%E6%97%B6%E5%AD%A6%E4%BC%9APython/">216小时学会Python</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://pythonpeixun.github.io/2016/08/23/实例对象加法和字符串表示/" data-id="cis6qtc8z000027s67fpkqln6" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/08/18/Python列表元素分组/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ouder</strong>
+      <div class="article-nav-title">Python列表元素分组</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archieven</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recente berichten</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/08/23/实例对象加法和字符串表示/">实例对象加法和字符串表示</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/18/Python列表元素分组/">Python列表元素分组</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/11/216小时学会Python/">216小时学会Python</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 黄哥 qq:1465376564<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
