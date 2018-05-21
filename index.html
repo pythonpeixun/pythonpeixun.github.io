@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://pythonpeixun.github.io"></form>
@@ -60,6 +60,95 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-total-of-number" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/21/total-of-number/" class="article-date">
+  <time datetime="2018-05-21T01:03:53.000Z" itemprop="datePublished">2018-05-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/21/total-of-number/">total_of_number</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>黄哥Python：从一个小题目看学习编程思路的重要性</p>
+<p>下面是网友的提问，假定输入的是正整数。<br>有网友提问“python输入一个数字 把这个数字各个位相加求和？”。</p>
+<p>解决这个问题，当然可以用字符串或list遍历相加。如果换一种编程语言，没有Python这样的特性呢？</p>
+<p>黄哥对初学者提示解决这样的问题，有常用的算法，用 % 10 和 // 10，请看下面的代码，</p>
+<p>和循环和递归去实现。</p>
+<pre><code># coding:utf-8
+&apos;&apos;&apos;
+黄哥Python培训 黄哥所写 咨询qq:1465376564
+Python 3
+
+&apos;&apos;&apos;
+
+
+def input_interger_number():
+    number = input(&apos;please input a integer number:\n&apos;)
+    while True:
+        if number.isdigit():
+            number = int(number)
+            break
+        else:
+            number = input(&apos;please input a integer number again:\n&apos;)
+    return number
+
+
+def total_of_number(n):
+    &apos;&apos;&apos;假定n 是 大于等于0 的整数 黄哥Python培训 黄哥所写&apos;&apos;&apos;
+    if n == 0:
+        return 0
+    sum = 0
+    while n &gt; 0:
+        sum += n % 10
+        n //= 10
+    return sum
+
+
+def total_of_number_recursion(n):
+    &apos;&apos;&apos;假定n 是 大于等于0 的整数 黄哥Python培训 黄哥所写&apos;&apos;&apos;
+    if n == 0:
+        return 0
+    return n % 10 + total_of_number_recursion(n // 10)
+
+
+def main():
+    &apos;&apos;&apos;黄哥Python培训 黄哥所写&apos;&apos;&apos;
+    number = input_interger_number()
+    print(total_of_number(number))
+    print(total_of_number_recursion(number))
+
+
+if __name__ == &apos;__main__&apos;:
+    main()
+</code></pre><p>很多初学编程者，最喜欢用list 去硬拼凑写出代码，没有想用到更好的数据结构和算法。</p>
+<p><a href="https://github.com/pythonpeixun/article/blob/master/python/how_to_learn_program2.md" target="_blank" rel="external">如何训练自己的编程思路</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://pythonpeixun.github.io/2018/05/21/total-of-number/" data-id="cjhfk09750001h5s6f0xu4p77" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-你想转行当程序员吗" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -101,7 +190,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pythonpeixun.github.io/2017/07/18/你想转行当程序员吗/" data-id="cj59et9kb00011js6at6ait4r" class="article-share-link">Share</a>
+      <a data-url="http://pythonpeixun.github.io/2017/07/18/你想转行当程序员吗/" data-id="cjhfk09780003h5s68ycak3aj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -152,7 +241,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pythonpeixun.github.io/2017/01/09/千人学习Python/" data-id="cj59et9kf00031js6ay788j9j" class="article-share-link">Share</a>
+      <a data-url="http://pythonpeixun.github.io/2017/01/09/千人学习Python/" data-id="cjhfk09790004h5s6enjo6snt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -224,7 +313,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pythonpeixun.github.io/2017/01/06/面授到底值不值/" data-id="cj59et9l000051js6gms1bkwk" class="article-share-link">Share</a>
+      <a data-url="http://pythonpeixun.github.io/2017/01/06/面授到底值不值/" data-id="cjhfk097l0006h5s6n222s9zd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -313,7 +402,7 @@ print str(p3)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pythonpeixun.github.io/2016/08/23/实例对象加法和字符串表示/" data-id="cj59et9kt00041js6my95b28q" class="article-share-link">Share</a>
+      <a data-url="http://pythonpeixun.github.io/2016/08/23/实例对象加法和字符串表示/" data-id="cjhfk097a0005h5s67yff1k3o" class="article-share-link">Share</a>
       
       
     </footer>
@@ -438,7 +527,7 @@ if __name__ == &apos;__main__&apos;:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pythonpeixun.github.io/2016/08/18/Python列表元素分组/" data-id="cj59et9kd00021js6eprpyhaz" class="article-share-link">Share</a>
+      <a data-url="http://pythonpeixun.github.io/2016/08/18/Python列表元素分组/" data-id="cjhfk09770002h5s6hc4fzrfk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -487,7 +576,7 @@ if __name__ == &apos;__main__&apos;:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pythonpeixun.github.io/2016/08/11/216小时学会Python/" data-id="cj59et9k700001js67s6yffyr" class="article-share-link">Share</a>
+      <a data-url="http://pythonpeixun.github.io/2016/08/11/216小时学会Python/" data-id="cjhfk09710000h5s6rrj6r0pg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -512,9 +601,9 @@ if __name__ == &apos;__main__&apos;:
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Arkiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li></ul>
     </div>
   </div>
 
@@ -522,9 +611,13 @@ if __name__ == &apos;__main__&apos;:
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Siste innlegg</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/05/21/total-of-number/">total_of_number</a>
+          </li>
         
           <li>
             <a href="/2017/07/18/你想转行当程序员吗/">你想转行当程序员吗</a>
@@ -542,10 +635,6 @@ if __name__ == &apos;__main__&apos;:
             <a href="/2016/08/23/实例对象加法和字符串表示/">实例对象加法和字符串表示</a>
           </li>
         
-          <li>
-            <a href="/2016/08/18/Python列表元素分组/">Python列表元素分组</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -558,7 +647,7 @@ if __name__ == &apos;__main__&apos;:
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 黄哥 qq:1465376564<br>
+      &copy; 2018 黄哥 qq:1465376564<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
