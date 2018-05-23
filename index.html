@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://pythonpeixun.github.io"></form>
@@ -60,6 +60,74 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Python实例属性设置的方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/23/Python实例属性设置的方法/" class="article-date">
+  <time datetime="2018-05-23T00:26:57.000Z" itemprop="datePublished">2018-05-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/23/Python实例属性设置的方法/">Python实例属性设置的方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="黄哥Python提醒-设置实例属性除在init-方法处之外，还可以在其它地方。"><a href="#黄哥Python提醒-设置实例属性除在init-方法处之外，还可以在其它地方。" class="headerlink" title="黄哥Python提醒, 设置实例属性除在init 方法处之外，还可以在其它地方。"></a>黄哥Python提醒, 设置实例属性除在<strong>init</strong> 方法处之外，还可以在其它地方。</h1><p>知乎上有一个提问者，就碰到这样的问题，下面的代码演示回答他的问题<br><a href="https://www.zhihu.com/question/278122095/answer/397864952" target="_blank" rel="external">python中普通方法中添加属性的时候，可以不在method.()括号中添加吗？</a></p>
+<h2 id="可以在类中的实例方法设置实例属性，凡是通过self点操作符为左值的时候，都是赋值，"><a href="#可以在类中的实例方法设置实例属性，凡是通过self点操作符为左值的时候，都是赋值，" class="headerlink" title="可以在类中的实例方法设置实例属性，凡是通过self点操作符为左值的时候，都是赋值，"></a>可以在类中的实例方法设置实例属性，凡是通过self点操作符为左值的时候，都是赋值，</h2><p>如果该属性存在，赋新值（绑定到新的对象），如果属性不存在，创建新的属性并将对象的引用赋值给该属性。</p>
+<p>请看下面的代码，但建议在<strong>init</strong> 方法处设置属性，但写一些测试代码时，会在其它方法中设置新的属性。</p>
+<pre><code># coding:utf-8
+&apos;&apos;&apos;
+黄哥Python培训 黄哥所写
+Python 3
+
+&apos;&apos;&apos;
+
+
+class Foo:
+
+    def set_name(self, name):
+        &apos;&apos;&apos;黄哥Python培训 黄哥所写&apos;&apos;&apos;
+        self.name = name
+
+    def get_name(self):
+        &apos;&apos;&apos;黄哥Python培训 黄哥所写&apos;&apos;&apos;
+        print(self.__dict__[&apos;name&apos;])
+        print(hasattr(self, &apos;name&apos;))
+        return self.name
+
+
+p = Foo()
+p.set_name(&quot;Python&quot;)
+print(p.get_name())
+# 输出结果
+# Python
+# True
+# Python
+</code></pre><p><a href="https://www.bilibili.com/video/av22524233" target="_blank" rel="external">黄哥谈转行当程序员</a><br><a href="https://www.bilibili.com/video/av22568243" target="_blank" rel="external">黄哥谈转行当程序员之二</a><br><a href="https://zhuanlan.zhihu.com/p/36562703" target="_blank" rel="external">黄哥Python提醒：转行当程序员修炼之路</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://pythonpeixun.github.io/2018/05/23/Python实例属性设置的方法/" data-id="cjhidpuh700015ks6fdbsy520" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Python参数默认参数之值只计算一次" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -155,7 +223,7 @@ print(f(3))
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pythonpeixun.github.io/2018/05/21/Python参数默认参数之值只计算一次/" data-id="cjhfkisfn0002oxs6fix5vt8s" class="article-share-link">Share</a>
+      <a data-url="http://pythonpeixun.github.io/2018/05/21/Python参数默认参数之值只计算一次/" data-id="cjhidpuh900035ks6ok68xk69" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -244,7 +312,7 @@ if __name__ == &apos;__main__&apos;:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pythonpeixun.github.io/2018/05/21/total-of-number/" data-id="cjhfkisfo0003oxs6fjdy53k1" class="article-share-link">Share</a>
+      <a data-url="http://pythonpeixun.github.io/2018/05/21/total-of-number/" data-id="cjhidpuhc00065ks6668ibyu6" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -294,7 +362,7 @@ if __name__ == &apos;__main__&apos;:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pythonpeixun.github.io/2017/07/18/你想转行当程序员吗/" data-id="cjhfkisfq0006oxs6vlpbef8g" class="article-share-link">Share</a>
+      <a data-url="http://pythonpeixun.github.io/2017/07/18/你想转行当程序员吗/" data-id="cjhidpuhb00055ks6m59l833g" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -345,7 +413,7 @@ if __name__ == &apos;__main__&apos;:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pythonpeixun.github.io/2017/01/09/千人学习Python/" data-id="cjhfkisfr0007oxs6w4auzr88" class="article-share-link">Share</a>
+      <a data-url="http://pythonpeixun.github.io/2017/01/09/千人学习Python/" data-id="cjhidpuha00045ks6thhwtoqa" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -417,7 +485,7 @@ if __name__ == &apos;__main__&apos;:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pythonpeixun.github.io/2017/01/06/面授到底值不值/" data-id="cjhfkisfp0005oxs6svu0zt0c" class="article-share-link">Share</a>
+      <a data-url="http://pythonpeixun.github.io/2017/01/06/面授到底值不值/" data-id="cjhidpuhd00075ks69oh6w1w0" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -506,7 +574,7 @@ print str(p3)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pythonpeixun.github.io/2016/08/23/实例对象加法和字符串表示/" data-id="cjhfkisfp0004oxs699li31bi" class="article-share-link">Share</a>
+      <a data-url="http://pythonpeixun.github.io/2016/08/23/实例对象加法和字符串表示/" data-id="cjhidpuhe00085ks6uszdem71" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -631,7 +699,7 @@ if __name__ == &apos;__main__&apos;:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pythonpeixun.github.io/2016/08/18/Python列表元素分组/" data-id="cjhfkisfl0001oxs6lfxpcu3v" class="article-share-link">Share</a>
+      <a data-url="http://pythonpeixun.github.io/2016/08/18/Python列表元素分组/" data-id="cjhidpuh300005ks68vixqi5m" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -680,7 +748,7 @@ if __name__ == &apos;__main__&apos;:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pythonpeixun.github.io/2016/08/11/216小时学会Python/" data-id="cjhfkisfh0000oxs6hny2cu64" class="article-share-link">Share</a>
+      <a data-url="http://pythonpeixun.github.io/2016/08/11/216小时学会Python/" data-id="cjhidpuh800025ks69g5njik0" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -715,9 +783,13 @@ if __name__ == &apos;__main__&apos;:
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/05/23/Python实例属性设置的方法/">Python实例属性设置的方法</a>
+          </li>
         
           <li>
             <a href="/2018/05/21/Python参数默认参数之值只计算一次/">黄哥Python Python 参数默认参数之值只计算一次</a>
@@ -735,10 +807,6 @@ if __name__ == &apos;__main__&apos;:
             <a href="/2017/01/09/千人学习Python/">千人学习Python</a>
           </li>
         
-          <li>
-            <a href="/2017/01/06/面授到底值不值/">面授到底值不值</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -752,7 +820,7 @@ if __name__ == &apos;__main__&apos;:
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2018 黄哥 qq:1465376564<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
