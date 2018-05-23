@@ -5,19 +5,19 @@
   
   <title>Python实例属性设置的方法 | 黄哥Python培训</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="黄哥Python提醒, 设置实例属性除在init 方法处之外，还可以在其它地方。知乎上有一个提问者，就碰到这样的问题，下面的代码演示回答他的问题python中普通方法中添加属性的时候，可以不在method.()括号中添加吗？
-可以在类中的实例方法设置实例属性，凡是通过self点操作符为左值的时候，都是赋值，如果该属性存在，赋新值（绑定到新的对象），如果属性不存在，创建新的属性并将对象的引用赋值给该">
+  <meta name="description" content="黄哥Python提醒, 设置实例属性除在__init__ 方法处之外，还可以在其它地方。知乎上有一个提问者，就碰到这样的问题，下面的代码演示回答他的问题python中普通方法中添加属性的时候，可以不在method.()括号中添加吗？
+可以在类中的实例方法设置实例属性，凡是通过self点操作符为左值的时候，都是赋值，如果该属性存在，赋新值（绑定到新的对象），如果属性不存在，创建新的属性并将对象的引用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python实例属性设置的方法">
 <meta property="og:url" content="http://pythonpeixun.github.io/2018/05/23/Python实例属性设置的方法/index.html">
 <meta property="og:site_name" content="黄哥Python培训">
-<meta property="og:description" content="黄哥Python提醒, 设置实例属性除在init 方法处之外，还可以在其它地方。知乎上有一个提问者，就碰到这样的问题，下面的代码演示回答他的问题python中普通方法中添加属性的时候，可以不在method.()括号中添加吗？
-可以在类中的实例方法设置实例属性，凡是通过self点操作符为左值的时候，都是赋值，如果该属性存在，赋新值（绑定到新的对象），如果属性不存在，创建新的属性并将对象的引用赋值给该">
-<meta property="og:updated_time" content="2018-05-23T00:36:48.239Z">
+<meta property="og:description" content="黄哥Python提醒, 设置实例属性除在__init__ 方法处之外，还可以在其它地方。知乎上有一个提问者，就碰到这样的问题，下面的代码演示回答他的问题python中普通方法中添加属性的时候，可以不在method.()括号中添加吗？
+可以在类中的实例方法设置实例属性，凡是通过self点操作符为左值的时候，都是赋值，如果该属性存在，赋新值（绑定到新的对象），如果属性不存在，创建新的属性并将对象的引用">
+<meta property="og:updated_time" content="2018-05-23T00:45:21.929Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python实例属性设置的方法">
-<meta name="twitter:description" content="黄哥Python提醒, 设置实例属性除在init 方法处之外，还可以在其它地方。知乎上有一个提问者，就碰到这样的问题，下面的代码演示回答他的问题python中普通方法中添加属性的时候，可以不在method.()括号中添加吗？
-可以在类中的实例方法设置实例属性，凡是通过self点操作符为左值的时候，都是赋值，如果该属性存在，赋新值（绑定到新的对象），如果属性不存在，创建新的属性并将对象的引用赋值给该">
+<meta name="twitter:description" content="黄哥Python提醒, 设置实例属性除在__init__ 方法处之外，还可以在其它地方。知乎上有一个提问者，就碰到这样的问题，下面的代码演示回答他的问题python中普通方法中添加属性的时候，可以不在method.()括号中添加吗？
+可以在类中的实例方法设置实例属性，凡是通过self点操作符为左值的时候，都是赋值，如果该属性存在，赋新值（绑定到新的对象），如果属性不存在，创建新的属性并将对象的引用">
   
     <link rel="alternate" href="/atom.xml" title="黄哥Python培训" type="application/atom+xml">
   
@@ -55,9 +55,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://pythonpeixun.github.io"></form>
@@ -88,9 +88,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="黄哥Python提醒-设置实例属性除在init-方法处之外，还可以在其它地方。"><a href="#黄哥Python提醒-设置实例属性除在init-方法处之外，还可以在其它地方。" class="headerlink" title="黄哥Python提醒, 设置实例属性除在init 方法处之外，还可以在其它地方。"></a>黄哥Python提醒, 设置实例属性除在<strong>init</strong> 方法处之外，还可以在其它地方。</h1><p>知乎上有一个提问者，就碰到这样的问题，下面的代码演示回答他的问题<br><a href="https://www.zhihu.com/question/278122095/answer/397864952" target="_blank" rel="external">python中普通方法中添加属性的时候，可以不在method.()括号中添加吗？</a></p>
+        <h1 id="黄哥Python提醒-设置实例属性除在-init-方法处之外，还可以在其它地方。"><a href="#黄哥Python提醒-设置实例属性除在-init-方法处之外，还可以在其它地方。" class="headerlink" title="黄哥Python提醒, 设置实例属性除在__init__ 方法处之外，还可以在其它地方。"></a>黄哥Python提醒, 设置实例属性除在__init__ 方法处之外，还可以在其它地方。</h1><p>知乎上有一个提问者，就碰到这样的问题，下面的代码演示回答他的问题<br><a href="https://www.zhihu.com/question/278122095/answer/397864952" target="_blank" rel="external">python中普通方法中添加属性的时候，可以不在method.()括号中添加吗？</a></p>
 <h2 id="可以在类中的实例方法设置实例属性，凡是通过self点操作符为左值的时候，都是赋值，"><a href="#可以在类中的实例方法设置实例属性，凡是通过self点操作符为左值的时候，都是赋值，" class="headerlink" title="可以在类中的实例方法设置实例属性，凡是通过self点操作符为左值的时候，都是赋值，"></a>可以在类中的实例方法设置实例属性，凡是通过self点操作符为左值的时候，都是赋值，</h2><p>如果该属性存在，赋新值（绑定到新的对象），如果属性不存在，创建新的属性并将对象的引用赋值给该属性。</p>
-<p>请看下面的代码，但建议在<strong>init</strong> 方法处设置属性，但写一些测试代码时，会在其它方法中设置新的属性。</p>
+<p>请看下面的代码，但建议在__init__ 方法处设置属性，但写一些测试代码时，会在其它方法中设置新的属性。</p>
 <pre><code># coding:utf-8
 &apos;&apos;&apos;
 黄哥Python培训 黄哥所写
@@ -124,7 +124,7 @@ print(p.get_name())
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pythonpeixun.github.io/2018/05/23/Python实例属性设置的方法/" data-id="cjhidpuh700015ks6fdbsy520" class="article-share-link">Partager</a>
+      <a data-url="http://pythonpeixun.github.io/2018/05/23/Python实例属性设置的方法/" data-id="cjhie07ey00019us6au7tnvyj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -135,7 +135,7 @@ print(p.get_name())
   
   
     <a href="/2018/05/21/Python参数默认参数之值只计算一次/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">黄哥Python Python 参数默认参数之值只计算一次</div>
     </a>
   
@@ -168,7 +168,7 @@ print(p.get_name())
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -205,7 +205,7 @@ print(p.get_name())
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2018 黄哥 qq:1465376564<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
